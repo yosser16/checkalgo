@@ -1,0 +1,22 @@
+ALGORITHM read-sentence
+VAR
+i , nbv: INTEGER:=0; 
+nbw : INTEGER :=1; 
+ p :=STRING
+BEGIN
+  write("type the sentence")
+  read (p)
+  WHILE (p[i] <> ".") DO
+    if ( p[i]=" ")then 
+    nbw:=nbw+1; 
+    END_IF 
+    IF (p[i]="a" OR p[i]="u" OR p[i]="e" OR  p[i]="i" OR p[i]="y" OR p[i]="o") THEN
+      nbv :=nbv+1;
+    END_IF 
+    i:=i+1; 
+  END_WHILE
+  write ("the number of voyels : ", nbv)
+   write ("the number of words : ", nbw)
+    write ("the length of the sentence : ", i)
+
+END
